@@ -35,6 +35,19 @@ This is the pattern that separates vendors who pass reviews from vendors who get
 
 A truthful gap with a compensating control usually passes. A discovered lie fails the review and every future one.
 
+### When policy and observed operation disagree
+
+The following example is fictional. Its question, documents and ticket are illustrative, not a vendor attestation or official questionnaire text.
+
+> **Q:** How long are production security logs retained?
+> **A:** Our policy requires 180 days. The latest operations check, dated 15 September 2026, found the service configured for 30 days. The discrepancy is under investigation; actual retained coverage has not yet been verified.
+> **Evidence:** Retention Policy v2, §3 (effective 10 September 2026); operations configuration check (15 September 2026); open ticket OPS-218
+> **Owner / status:** Operations owner — needs verification before submission
+
+The policy is evidence of the requirement; the configuration check is evidence of an observed setting. Neither, by itself, proves the available log history. Keep both citations with the answer so a reviewer does not mistake the policy period for implemented retention.
+
+Do not invent a compensating control or a delivery date to fill this pattern. If neither is confirmed, say so in the gap record and ask the owner for the actual mitigation and remediation plan. Before approving the answer, verify retained coverage, update the discrepancy's status, and record the verification date. A reviewer may still require remediation; truthful wording does not guarantee acceptance.
+
 ## Anti-patterns — answers that fail reviews
 
 | Anti-pattern | Why it fails |
